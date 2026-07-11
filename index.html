@@ -1,30 +1,134 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>🤣 Gotcha!</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Awareness Check</title>
+
 <style>
 body{
-background:black;
-color:white;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-font-family:Arial;
-text-align:center;
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f3f5f7;
 }
+
+.container{
+    width:420px;
+    margin:50px auto;
+    background:white;
+    border-radius:12px;
+    padding:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+h2{
+    text-align:center;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin-top:12px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:15px;
+    box-sizing:border-box;
+}
+
+.check{
+    margin-top:20px;
+}
+
+button{
+    width:100%;
+    margin-top:20px;
+    padding:14px;
+    background:#0066ff;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#004dcc;
+}
+
+#result{
+    display:none;
+    text-align:center;
+    padding:40px;
+}
+
 h1{
-font-size:60px;
-}
-p{
-font-size:30px;
+    font-size:50px;
+    color:red;
 }
 </style>
 </head>
+
 <body>
-<div>
-<h1>🤣 YOU GOT SCAMMED! 🤣</h1>
-<p>Don't worry da... Just a prank 😜</p>
+
+<div class="container" id="form">
+
+<h2>Security Awareness Challenge</h2>
+
+<p>Complete this short demo.</p>
+
+<input placeholder="Full Name">
+
+<input type="date">
+
+<input type="email" placeholder="Email Address">
+
+<input placeholder="Phone Number">
+
+<div class="check">
+<label>
+<input type="checkbox">
+I confirm I reviewed the information above.
+</label>
 </div>
+
+<button onclick="show()">Continue</button>
+
+</div>
+
+<div id="result">
+
+<h1>🤣 YOU GOT SCAMMED! 🤣</h1>
+
+<h2>This was only a cybersecurity awareness demonstration.</h2>
+
+<p>
+If this had been a malicious website, you might have shared personal information without verifying the site.
+</p>
+
+<p><b>Good news:</b> Nothing you typed was saved or transmitted anywhere.</p>
+
+<h3>Remember:</h3>
+
+<p>✅ Verify the website address.</p>
+
+<p>✅ Don't trust random links.</p>
+
+<p>✅ Think before entering personal information.</p>
+
+</div>
+
+<script>
+
+function show(){
+
+document.getElementById("form").style.display="none";
+document.getElementById("result").style.display="block";
+
+window.scrollTo(0,0);
+
+}
+
+</script>
+
 </body>
 </html>
